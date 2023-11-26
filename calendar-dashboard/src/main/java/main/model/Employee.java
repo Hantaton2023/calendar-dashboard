@@ -33,6 +33,8 @@ public class Employee {
 
 	private String post;
 
+	private boolean isBeneficiary;
+
 	private PostCategorie postCategorie;
 
 	@ManyToOne
