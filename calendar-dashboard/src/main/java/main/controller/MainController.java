@@ -21,15 +21,13 @@ public class MainController {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
-	@GetMapping("/depatment")
-	@ResponseBody
-	public List<Department> getDepartment() {
-		return departmentsRepository.findAll();
+	@GetMapping("/depatments")
+	public List<Department> findAllDepartmentByUser(@RequestBody User user) {
+		return departmentsRepository.findAllDepartmentByUser(user);
 	}
 
-	@GetMapping("/employee")
-	@ResponseBody
-	public List<Employee> getEmployee() {
-		return employeeRepository.findAll();
+	@GetMapping("/employees")
+	public List<Department> findAllEmployeesByDepartment(@RequestBody Department department) {
+		return employeeRepository.findAllEmployeesByDepartment(department);
 	}
 }
