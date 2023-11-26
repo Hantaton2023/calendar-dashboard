@@ -9,5 +9,5 @@ import main.model.User;
 @Repository
 public interface DepartmentsRepository extends JpaRepository<Department, Long> {
 
-	Department getDepartmentByUser(User user);
+	List<Department> findAllDepartmentByUser(User user);
 }
